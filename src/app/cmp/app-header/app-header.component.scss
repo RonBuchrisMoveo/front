@@ -1,0 +1,23 @@
+.app-header-wrapper {
+    height: 55px;
+    background-color: #253541;
+    padding: 10px 0;
+    .app-header {
+        .logo {
+            font-size: 1.6rem;
+            flex-grow: 1;
+        }
+        nav {
+            ul {
+                gap: 30px;
+                li {
+                    cursor: pointer;
+                    a {
+                        text-decoration: none;
+                        color: whitesmoke;
+                    }
+                }
+            }
+        }
+    }
+}

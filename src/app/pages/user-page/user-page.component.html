@@ -1,0 +1,11 @@
+<div class="users-container">
+        <div class="user-container" *ngFor="let user of users">
+            <div class="user-name">{{user.name}}</div>
+            <div class="user-email">{{user.email}}</div>
+            <div class="user-phone">{{user.phone}}</div>
+            <div class="admin-action">
+                <div class="update">update</div>
+                <div class="delete">delete</div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="login-page">
+
+    <section class="stark-login">
+        <form>
+            <div class="fade-box">
+                <button (click)="loginToggle('login')" class="login-signup">Login</button>
+                <span>/</span>
+                <button (click)="loginToggle('signup')" class="login-signup">Sign up</button>
+
+                <label for="username"></label>
+                <input [(ngModel)]="user.name" type="text" name="username" id="username" placeholder="Username">
+
+                <label for="password"></label>
+                <input [(ngModel)]="user.password" type="password" name="password" id="password" placeholder="Password">
+
+                <label for="email"></label>
+                <input *ngIf="isSignUp" [(ngModel)]="user.email" type="email" name="email" id="email"
+                    placeholder="Email">
+
+                <label for="phone"></label>
+                <input *ngIf="isSignUp" [(ngModel)]="user.phone" type="phone" name="phone" id="phone"
+                    placeholder="Phone">
+
+                <button (click)="userLogin()" class="btn-login">Log In</button>
+            </div>
+        </form>
+    </section>
+    
+    <section>
+        <article class="inner-cirlce">
+        </article>
+    </section>
+</div>
+
+    

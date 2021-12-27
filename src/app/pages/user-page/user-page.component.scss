@@ -1,0 +1,35 @@
+.users-container {
+    background-color: #0c1217;
+    .user-container {
+        background-color: #253541;
+        box-shadow: 0 -2px 1px 0px #494949;
+        margin-top: 3px;
+        grid-gap: 20px;
+        gap: 20px;
+        padding: 15px;
+        cursor: pointer;
+        .admin-action{
+            display:flex;
+            .delete{
+                background-color: #ef4f6b;
+                padding: 7px;
+                color: whitesmoke;
+                border: 2px solid #0c1217;
+                border-radius: 7px;
+                width: 70px;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+            .update{
+                background-color: #6db0f7;
+                padding: 7px;
+                color: whitesmoke;
+                border: 2px solid #0c1217;
+                border-radius: 7px;
+                width: 70px;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+        }
+    }
+}
