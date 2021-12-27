@@ -13,6 +13,7 @@ export class AuthService {
   public async login(user: any) {
     try {
       const loggedinUser = await this.http.post(this.BASE_URL + 'auth/login', user).toPromise()
+      console.log(`loggedinUser`, loggedinUser)
       sessionStorage.setItem('loggedinUser', JSON.stringify(loggedinUser))
       return loggedinUser
     } catch (err) {
