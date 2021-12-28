@@ -1,20 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+// import { CookieService } from 'ngx-cookie-service';
+// import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    // private cookie: CookieService,
+    // private router: Router
+  ) { }
 
   private BASE_URL = '//localhost:3030/api/'
 
   public async login(user: any) {
     try {
-      const loggedinUser = await this.http.post(this.BASE_URL + 'auth/login', user).toPromise()
-      console.log(`loggedinUser`, loggedinUser)
-      sessionStorage.setItem('loggedinUser', JSON.stringify(loggedinUser))
+      const loggedinUser: any = await this.http.post(this.BASE_URL + 'auth/login', user).toPromise()
+      // sessionStorage.setItem('loggedinUser', JSON.stringify(loggedinUser))
+      // if (token) {
+      //   this.cookie.set('user-token', token)
+      //   this.router.navigate(['/contact'])
+      // }
       return loggedinUser
     } catch (err) {
       throw err
@@ -40,7 +49,7 @@ export class AuthService {
 
   // public validateEmail(email: string | any[]) {
   //   if (email.length > 26) return false
-    
+
   //   const emailType = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   //   return emailType.test(String(email).toLowerCase());
   // }

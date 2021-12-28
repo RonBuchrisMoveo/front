@@ -2,9 +2,8 @@
 
     <section class="stark-login">
         <form>
-            <div class="fade-box">
+            <div *ngIf="!islogin" class="fade-box">
                 <button (click)="loginToggle('login')" class="login-signup">Login</button>
-                <span>/</span>
                 <button (click)="loginToggle('signup')" class="login-signup">Sign up</button>
 
                 <label for="username"></label>
@@ -22,6 +21,12 @@
                     placeholder="Phone">
 
                 <button (click)="userLogin()" class="btn-login">Log In</button>
+            </div>
+            <div *ngIf="islogin" class="logedin">
+                <div>
+                    Hello {{username}} !
+                    <button>Logout</button>
+                </div>
             </div>
         </form>
     </section>
