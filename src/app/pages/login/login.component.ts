@@ -55,4 +55,9 @@ export class LoginComponent {
       }
     }
   }
+onLogout =()=>{
+  this.cookie.deleteAll()
+  this.router.navigate(['/'])
+}
+
 }

@@ -25,7 +25,7 @@
             <div *ngIf="islogin" class="logedin">
                 <div>
                     Hello {{username}} !
-                    <button>Logout</button>
+                    <button (click)="onLogout()">Logout</button>
                 </div>
             </div>
         </form>

@@ -4,7 +4,7 @@
             <div class="user-email">{{user.email}}</div>
             <div class="user-phone">{{user.phone}}</div>
             <div class="admin-action">
-                <div *ngIf="admin" class="update">update</div>
+                <div *ngIf="admin" (click)='onUpdate(user._id)' class="update">update</div>
                 <div *ngIf="admin" (click)='onDelete(user._id)' class="delete">delete</div>
             </div>
         </div>

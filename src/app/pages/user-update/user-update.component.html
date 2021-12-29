@@ -1,0 +1,25 @@
+
+<div class="login-page">
+
+    <section class="stark-login">
+        <form>
+            <div class="fade-box">
+                <label for="username"></label>
+                <input [(ngModel)]="userUpdated.name" type="text" name="username" id="username" placeholder="Username">
+
+                <label for="email"></label>
+                <input  [(ngModel)]="userUpdated.email" type="email" name="email" id="email"
+                    placeholder="Email">
+
+                <label for="phone"></label>
+                <input  [(ngModel)]="userUpdated.phone" type="phone" name="phone" id="phone"
+                    placeholder="Phone">
+
+                <button (click)="updateUser()" class="btn-update">save</button>
+            </div>
+        </form>
+    </section>
+    
+</div>
+
+    

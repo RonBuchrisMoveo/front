@@ -10,6 +10,7 @@ import { AppHeaderComponent } from './cmp/app-header/app-header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { LoginComponent } from './pages/login/login.component';
+import { UserUpdateComponent } from './pages/user-update/user-update.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LoginComponent } from './pages/login/login.component';
     HomePageComponent,
     UserPageComponent,
     LoginComponent,
+    UserUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,10 @@ import { LoginComponent } from './pages/login/login.component';
       {
         path:'login',
         component:LoginComponent
+      },
+      {
+        path:'update/:id',
+        component:UserUpdateComponent
       }
     ])
   ],

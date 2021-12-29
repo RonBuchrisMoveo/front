@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-user-page',
@@ -10,7 +12,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class UserPageComponent {
  public users:any
  public admin:Boolean=false
-  constructor(private userService:UserService,private cookie:CookieService) {
+  constructor(private userService:UserService,private cookie:CookieService,private router:Router) {
     this.userService.query().subscribe((data)=> {
       this.users = data;
     });
@@ -24,8 +26,7 @@ export class UserPageComponent {
        this.users = data
      })
    }
-
-
-
-
+   onUpdate=(userId:string)=>{
+   this.router.navigate([`/update/${userId}`])
+   }
 }
